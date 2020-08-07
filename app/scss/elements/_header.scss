@@ -1,0 +1,78 @@
+.wrapper {
+  border: 2px solid $color-light-grey;
+  box-shadow: 0 3px 6px #00000029;
+}
+
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 80px;
+  @include mobile {
+    min-height: 80px;
+  }
+  .logo {
+    font-family: $font-primary;
+    font-size: 2rem;
+    color: $color-primary;
+    margin-left: 6%;
+  }
+  .hamburger {
+    @include mobile {
+      display: flex;
+      margin-right: 10%;
+    }
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 17px;
+    &:focus {
+      outline: none;
+    }
+    .bar {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $color-primary;
+    }
+  }
+  .nav-ul {
+    @include mobile {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      padding: 31px;
+      &:hover {
+        border-bottom: 4px solid $color-primary;
+      }
+      a {
+        font-family: $font-secondary;
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: $color-grey;
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+  }
+}
+
+
+
+.nav-ul.show {
+  @include mobile {
+    display: flex;
+  }
+}
