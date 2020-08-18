@@ -1,0 +1,65 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-size: 36px;
+    font-family: $font-primary;
+    text-align: center;
+    margin-top: 100px;
+  }
+  .circle {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    position: relative;
+    img {
+      position: absolute;
+      top: 10px;
+      left: 30px;
+    }
+  }
+  .red {
+    background-color: $color-redish;
+  }
+  .blue {
+    background-color: $color-primary;
+    img {
+      top: 16px;
+    }
+  }
+  .green {
+    background-color: $color-greenish;
+  }
+  span {
+    font-family: $font-primary;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+  }
+  p {
+    font-family: $font-primary;
+    font-size: 17px;
+    color: $color-grey;
+  }
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include mobile {
+      margin-top: 50px;
+    }
+  }
+  .infographContainer {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 160px;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+}
