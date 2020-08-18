@@ -25,9 +25,7 @@ const Header = () => {
 document.addEventListener("DOMContentLoaded", (event) => {
 
     const hamburgerElem = document.getElementById("hamburger");
-    console.log(hamburgerElem);
     const navElem = document.querySelector(".nav-ul");
-    console.log(navElem);
 
     hamburgerElem.addEventListener("click", () => {
         navElem.classList.toggle("show");
